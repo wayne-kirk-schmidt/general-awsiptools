@@ -22,6 +22,11 @@ Parse out network blocks:
 
 NOTE: the consolidation seems to provide a 70% reduction in blocks.
 
+Todo
+====
+
++ implement support for IPv6 addresses
+
 License
 =======
 

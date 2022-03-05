@@ -8,6 +8,7 @@ import json
 import ipaddress
 
 INPUTFILE = str(sys.argv[1])
+IPLIST = list()
 
 with open(INPUTFILE) as fileobj:
     with open(INPUTFILE, 'r') as jsonfile:
@@ -18,4 +19,9 @@ for block in AWSIPDICT['prefixes']:
         NSTRING = (str(block['ip_prefix']))
         (nbase, nprefix) = NSTRING.split('/')
         for ip in ipaddress.IPv4Network(NSTRING):
-            print(ip)
+            IPLIST.append(ip)
+
+### print('### Original: {}'.format(len(set(IPLIST))))
+
+for ipaddr in IPLIST:
+    print(str(ipaddr))

@@ -9,14 +9,18 @@ The tools in this repository will operate on the AWS IP ranges JSON file:
 Usage
 =====
 
-
 Expand out all of the IP network address blocks into specific IP Addresses.
 
-+   ./bin/awsparser.ip-addresses.py <jsonfile>
++   ./bin/awsparser_ipaddr.py ./etc/sample-ip-ranges.json
+
+NOTE: this may take a long time
 
 Parse out network blocks:
 
-+   ./bin/awsparser.ip-networks.py
++   ./bin/awsparser_ipblocks.py ./etc/sample-ip-ranges.json
+
+
+NOTE: the consolidation seems to provide a 70% reduction in blocks.
 
 License
 =======
